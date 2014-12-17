@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Created by devon on 17/12/2014.
  */
 public class Power {
-    static int result;
+
     public static void main(String[] args) {
 
         Scanner user = new Scanner(System.in);
@@ -18,20 +18,22 @@ public class Power {
     }
 
     static int power(int a,int b) {
-        result = a;
+        int result = a;
 
 
-        if ( b==1){
+        if ( b==0){
             return result;
 
 
     }
         else{
-            result += result*a;
-            System.out.println( " B: "+ b);
-            power(a,b-1);
+             result = a*a;
+
+            System.out.println(" a: :" +  a);
             System.out.println(" Result :" +  result);
-            System.out.println( b);
+            System.out.println(" b: "+ b);
+            power(result,b-1);
+
             return 2;}
 
 

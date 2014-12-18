@@ -30,18 +30,9 @@ static int base;
 
     }
         else {
+            a = a*base;
 
-            a= a*base;
-            int result =a;
-            System.out.println(" a: :" +  a);
-            System.out.println(" a: :" +  a);
-            System.out.println(" Result :" +  a);
-            System.out.println(" b: "+ b);
-
-            power(a,b-1);
-
-            System.out.println(" b1 : "+ b);
-            return result;}
+          return power(a, b-1);}
 
 
 

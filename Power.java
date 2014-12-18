@@ -4,37 +4,45 @@ import java.util.Scanner;
  * Created by devon on 17/12/2014.
  */
 public class Power {
-
+static int base;
     public static void main(String[] args) {
 
         Scanner user = new Scanner(System.in);
 
         int bas = user.nextInt();
+        base =bas;
         int expon = user.nextInt();
 
-        System.out.println( power(bas, expon));
+        int result = power(bas, expon);
+        System.out.println( result);
 
 
     }
 
     static int power(int a,int b) {
-        int result = a;
 
 
-        if ( b==0){
-            return result;
+
+
+        if ( b==1){
+            return a;
 
 
     }
-        else{
-             result = a*a;
+        else {
 
+            a= a*base;
+            int result =a;
             System.out.println(" a: :" +  a);
-            System.out.println(" Result :" +  result);
+            System.out.println(" a: :" +  a);
+            System.out.println(" Result :" +  a);
             System.out.println(" b: "+ b);
-            power(result,b-1);
 
-            return 2;}
+            power(a,b-1);
+
+            System.out.println(" b1 : "+ b);
+            return result;}
+
 
 
 
